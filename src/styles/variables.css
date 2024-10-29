@@ -1,0 +1,12 @@
+:root {
+  --primary: #6a49ea;
+  --primary-dark: #4a29ca;
+  --white: #fff;
+  --offWhite: #eaeaea;
+  --darkGray: #222;
+  --black: #131119;
+
+  --spacing: 8px;
+
+  --borderRadius: var(--spacing);
+}

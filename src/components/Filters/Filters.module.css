@@ -1,0 +1,12 @@
+.root {
+  display: flex;
+  gap: var(--spacing);
+  padding-block: var(--spacing);
+  flex-direction: column;
+}
+
+@media (min-width: 500px) {
+  .root {
+    flex-direction: row;
+  }
+}

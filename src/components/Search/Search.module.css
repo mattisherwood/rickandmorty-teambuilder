@@ -1,0 +1,18 @@
+.root {
+  position: sticky;
+  top: 0;
+  background: var(--offWhite);
+  padding-block: var(--spacing);
+  z-index: 1;
+}
+
+.input {
+  width: 100%;
+  padding: var(--spacing);
+}
+
+@media (prefers-color-scheme: dark) {
+  .root {
+    background: var(--black);
+  }
+}

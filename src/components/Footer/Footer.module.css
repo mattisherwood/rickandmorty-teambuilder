@@ -1,0 +1,26 @@
+.root {
+  display: flex;
+  flex: 1;
+  padding-block: calc(var(--spacing) * 4);
+  border-top: 1px solid var(--offWhite);
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: var(--white);
+}
+
+.logo {
+  height: 1em;
+  margin: 0 0 -2px 0.5rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  .root {
+    background: var(--black);
+    border-color: var(--darkGray);
+  }
+
+  .logo {
+    filter: invert(1);
+  }
+}
