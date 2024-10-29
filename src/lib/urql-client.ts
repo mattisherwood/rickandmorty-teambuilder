@@ -1,8 +1,8 @@
-import { cacheExchange, createClient, debugExchange, fetchExchange } from "urql"
+import { cacheExchange, createClient, fetchExchange } from "urql"
 
 const client = createClient({
   url: "https://rickandmortyapi.com/graphql",
-  exchanges: [cacheExchange, debugExchange, fetchExchange],
+  exchanges: [cacheExchange, fetchExchange],
 })
 
 export default client

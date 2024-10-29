@@ -5,8 +5,6 @@ import { NextResponse } from "next/server"
 export async function GET() {
   try {
     const result = await client.query(GET_CHARACTERS, {}).toPromise()
-    console.log("GraphQL query result:", result) // Debugging log
-
     if (result.error) {
       throw new Error(result.error.message)
     }

@@ -27,21 +27,12 @@ export default function CharacterPicker() {
     []
   )
 
-  // Modal status
-  const [isModalOpen, setIsModalOpen] = useState(false)
-
-  console.log("selectedCharacters", selectedCharacters)
-
   useEffect(() => {
     fetch("/api/characters")
       .then((response) => response.json())
       .then((data) => {
         setCharacters(data.results)
         setFilteredCharacters(data.results)
-        // TODO: Add available species, and available genders to populate the filter facets
-        // setAvailableGenders(
-        //     data.results...
-        // )
       })
   }, [])
 
@@ -58,8 +49,6 @@ export default function CharacterPicker() {
 
     setFilteredCharacters(filtered)
   }, [characters, genderFilter, search, speciesFilter, statusFilter])
-
-  console.log("isModalOpen", isModalOpen)
 
   return (
     <>
