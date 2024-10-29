@@ -3,7 +3,7 @@
 import { CharacterType } from "@/types"
 import { useEffect, useState } from "react"
 import { CharacterTable } from "../CharacterTable/CharacterTable"
-import { Container } from "../Container"
+import { Container } from "../Container/Container"
 import { Filters } from "../Filters/Filters"
 import { Modal } from "../Modal/Modal"
 import { Search } from "../Search/Search"

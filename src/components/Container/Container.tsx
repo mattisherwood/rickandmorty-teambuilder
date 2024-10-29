@@ -4,12 +4,9 @@ import classes from "./Container.module.css"
 
 type Props = {
   children: ReactNode
-  size?: "small" | "medium" | "large"
   className?: string
 }
 
-export const Container = ({ children, size = "small", className }: Props) => (
-  <div className={clsx(classes.container, classes[size], className)}>
-    {children}
-  </div>
+export const Container = ({ children, className }: Props) => (
+  <div className={clsx(classes.container, className)}>{children}</div>
 )

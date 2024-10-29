@@ -1,4 +1,4 @@
-import { Container } from "../Container"
+import { Container } from "../Container/Container"
 import classes from "./Header.module.css"
 
 export const Header = () => (

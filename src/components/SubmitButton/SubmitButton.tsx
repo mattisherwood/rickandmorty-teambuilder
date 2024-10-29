@@ -1,5 +1,5 @@
 import { CharacterType } from "@/types"
-import { Container } from "../Container"
+import { Container } from "../Container/Container"
 import classes from "./SubmitButton.module.css"
 
 type Props = {

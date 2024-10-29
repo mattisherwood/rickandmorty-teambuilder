@@ -1,6 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
-import { Container } from "../Container"
+import { Container } from "../Container/Container"
 import classes from "./Footer.module.css"
 
 export const Footer = () => {
