@@ -1,8 +1,10 @@
 # Rick & Morty Team Builder
 
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+This is a [Next.js](https://nextjs.org) project (bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app) to see what I could create in short period of time.
 
-It was to see how far I could create within 3hrs, particularly for the MVP.
+|                                                                                                          |                                                                                                        |                                                                                                    |
+| -------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------- |
+| After **3hrs** ([Load](https://rickandmorty-teambuilder-hbt60rks8-matt-isherwoods-projects.vercel.app/)) | Filterable character list with data fetched from public API, generates random team from filtered list. | [![3 hours][3hr]](https://rickandmorty-teambuilder-hbt60rks8-matt-isherwoods-projects.vercel.app/) |
 
 ## Getting Started
 
@@ -18,9 +20,11 @@ Then run the development server:
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
 
-Or visit [rickandmorty-teambuilder.vercel.app](https://rickandmorty-teambuilder.vercel.app/) to see it deployed on [Vercel](https://vercel.com/).
+## Viewing online
+
+Alternatively visit [rickandmorty-teambuilder.vercel.app](https://rickandmorty-teambuilder.vercel.app/) to see the latest version of the app deployed on [Vercel](https://vercel.com/).
 
 ## Learn More
 
@@ -36,3 +40,5 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 This is deployed on the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out the [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+[3hr]: screenshots/3hr-screenshots.png "Screenshot of the app after 3 hours"
