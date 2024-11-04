@@ -1,22 +1,36 @@
-import Image from "next/image"
+import clsx from "clsx"
+import { Avatar } from "../Avatar/Avatar"
 import classes from "./Character.module.css"
 
 type Props = {
-  name: string
-  species: string
   gender: string
   image: string
+  isActive?: boolean
+  name: string
+  onClick?: () => void
+  species: string
   status: string
 }
 
-export const Character = ({ name, species, gender, image, status }: Props) => (
-  <div className={classes.root}>
-    <Image
-      className={classes.image}
-      src={image}
-      alt={name}
-      width={60}
-      height={60}
+export const Character = ({
+  gender,
+  image,
+  isActive,
+  name,
+  onClick,
+  species,
+  status,
+}: Props) => (
+  <div
+    className={clsx(classes.root, onClick && classes.clickable)}
+    onClick={onClick}
+  >
+    <Avatar
+      className={classes.avatar}
+      image={image}
+      isActive={isActive}
+      name={name}
+      size={60}
     />
     <div className={classes.details}>
       <h2 className={classes.name}>{name}</h2>

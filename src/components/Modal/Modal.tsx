@@ -1,24 +1,23 @@
-import { CharacterType } from "@/types"
 import classes from "./Modal.module.css"
 
 type Props = {
   children: React.ReactNode
-  setSelectedCharacters: (selectedCharacters: CharacterType[]) => void
+  setIsModalOpen: (isModalOpen: boolean) => void
 }
 
-export const Modal = ({ children, setSelectedCharacters }: Props) => {
+export const Modal = ({ children, setIsModalOpen }: Props) => {
   return (
     <div
       className={classes.overlay}
       onClick={() => {
-        setSelectedCharacters([])
+        setIsModalOpen(false)
       }}
     >
       <div className={classes.modal} onClick={(e) => e.stopPropagation()}>
         <button
           className={classes.close}
           onClick={() => {
-            setSelectedCharacters([])
+            setIsModalOpen(false)
           }}
         >
           X

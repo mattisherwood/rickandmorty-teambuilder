@@ -2,9 +2,10 @@
 
 This is a [Next.js](https://nextjs.org) project (bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app) to see what I could create in short period of time.
 
-|                                                                                                          |                                                                                                        |                                                                                                    |
-| -------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------- |
-| After **3hrs** ([Load](https://rickandmorty-teambuilder-hbt60rks8-matt-isherwoods-projects.vercel.app/)) | Filterable character list with data fetched from public API, generates random team from filtered list. | [![3 hours][3hr]](https://rickandmorty-teambuilder-hbt60rks8-matt-isherwoods-projects.vercel.app/) |
+|                                                                                                                |                                                                                                        |                                                                                                          |
+| -------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------- |
+| After **3hrs** ([Load](https://rickandmorty-teambuilder-hbt60rks8-matt-isherwoods-projects.vercel.app/))       | Filterable character list with data fetched from public API, generates random team from filtered list. | [![3 hours][3hr]](https://rickandmorty-teambuilder-hbt60rks8-matt-isherwoods-projects.vercel.app/)       |
+| After a further **1hr 10min** ([Load](rickandmorty-teambuilder-jh139afch-matt-isherwoods-projects.vercel.app)) | Improve team selection functionality with individual selection/deselection, randomize & clear.         | [![4 hours 10minutes][4hr10min]](rickandmorty-teambuilder-jh139afch-matt-isherwoods-projects.vercel.app) |
 
 ## Getting Started
 
@@ -42,3 +43,4 @@ This is deployed on the [Vercel Platform](https://vercel.com/new?utm_medium=defa
 Check out the [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
 
 [3hr]: screenshots/3hr-screenshots.png "Screenshot of the app after 3 hours"
+[4hr10min]: screenshots/4hr10min-screenshots.png "Screenshot of the app after 4 hours 10min"

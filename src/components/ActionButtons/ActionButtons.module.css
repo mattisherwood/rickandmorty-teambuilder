@@ -1,0 +1,34 @@
+.root {
+  position: sticky;
+  bottom: 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  background: var(--white);
+}
+
+.container {
+  display: flex;
+  gap: var(--spacing);
+  padding-block: calc(var(--spacing) * 2);
+}
+
+.teamButton {
+  width: 100%;
+  display: flex;
+  gap: var(--spacing);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.circle {
+  border: solid 1px var(--primary);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+@media (prefers-color-scheme: dark) {
+  .root {
+    background: var(--black);
+    border-top: solid 1px var(--darkGray);
+  }
+}

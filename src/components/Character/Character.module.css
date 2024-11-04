@@ -5,10 +5,12 @@
   flex-wrap: wrap;
 }
 
-.image {
-  width: 60px;
-  height: 60px;
-  border-radius: 100%;
+.clickable {
+  cursor: pointer;
+}
+
+.clickable:hover .avatar {
+  box-shadow: 0 0 0.5rem var(--primary);
 }
 
 .name {

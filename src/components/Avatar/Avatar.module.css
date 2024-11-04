@@ -1,0 +1,32 @@
+.root {
+  position: relative;
+}
+
+.root::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: solid 3px transparent;
+  border-radius: 50%;
+}
+
+.active::before {
+  background: rgba(var(--primary-rgb), 0.7);
+  border-color: var(--primary);
+}
+
+.active::after {
+  content: "✔";
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--black);
+  font-weight: bold;
+}
+
+.image {
+  border-radius: 50%;
+  display: block;
+}
