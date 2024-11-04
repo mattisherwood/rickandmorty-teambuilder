@@ -2,10 +2,10 @@
 
 This is a [Next.js](https://nextjs.org) project (bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app) to see what I could create in short period of time.
 
-|                                                                                                          |                                                                                                        |                                                                                                    |
-| -------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------- |
-| After **3hrs** ([Load](https://rickandmorty-teambuilder-hbt60rks8-matt-isherwoods-projects.vercel.app/)) | Filterable character list with data fetched from public API, generates random team from filtered list. | [![3 hours][3hr]](https://rickandmorty-teambuilder-hbt60rks8-matt-isherwoods-projects.vercel.app/) |
-| After a further **1hr 10min** ([Load](https://rickandmorty-teambuilder.vercel.app))                      | Improve team selection functionality with individual selection/deselection, randomize & clear.         | [![4 hours 10minutes][4hr10min]](https://rickandmorty-teambuilder.vercel.app)                      |
+|                                                                                                                |                                                                                                        |                                                                                                          |
+| -------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------- |
+| After **3hrs** ([Load](https://rickandmorty-teambuilder-hbt60rks8-matt-isherwoods-projects.vercel.app/))       | Filterable character list with data fetched from public API, generates random team from filtered list. | [![3 hours][3hr]](https://rickandmorty-teambuilder-hbt60rks8-matt-isherwoods-projects.vercel.app/)       |
+| After a further **1hr 10min** ([Load](rickandmorty-teambuilder-jh139afch-matt-isherwoods-projects.vercel.app)) | Improve team selection functionality with individual selection/deselection, randomize & clear.         | [![4 hours 10minutes][4hr10min]](rickandmorty-teambuilder-jh139afch-matt-isherwoods-projects.vercel.app) |
 
 ## Getting Started
 
