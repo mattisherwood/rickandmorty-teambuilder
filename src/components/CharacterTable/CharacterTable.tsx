@@ -3,21 +3,48 @@ import { Character } from "../Character/Character"
 
 type Props = {
   characters: CharacterType[]
+  selectedCharacters?: CharacterType[]
+  setSelectedCharacters?: (characters: CharacterType[]) => void
 }
 
-export const CharacterTable = ({ characters }: Props) => {
-  return (
-    <div>
-      {characters.map(({ id, name, image, species, gender, status }) => (
+export const CharacterTable = ({
+  characters,
+  selectedCharacters,
+  setSelectedCharacters,
+}: Props) => (
+  <div>
+    {characters.map((character) => {
+      const { id, name, image, species, gender, status } = character
+      const isActive =
+        selectedCharacters &&
+        selectedCharacters.some(
+          (selectedCharacter) => selectedCharacter?.id === id
+        )
+      return (
         <Character
+          gender={gender}
+          image={image}
+          isActive={isActive}
           key={id}
           name={name}
-          image={image}
+          onClick={
+            setSelectedCharacters != undefined &&
+            selectedCharacters != undefined
+              ? () => {
+                  setSelectedCharacters(
+                    isActive
+                      ? selectedCharacters.filter(
+                          (character) => character?.id !== id
+                        )
+                      : [...selectedCharacters, character]
+                  )
+                }
+              : undefined
+          }
           species={species}
-          gender={gender}
           status={status}
         />
-      ))}
-    </div>
-  )
-}
+      )
+    })}
+  </div>
+)

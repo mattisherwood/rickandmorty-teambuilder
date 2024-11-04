@@ -2,12 +2,12 @@
 
 import { CharacterType } from "@/types"
 import { useEffect, useState } from "react"
+import { ActionButtons } from "../ActionButtons/ActionButtons"
 import { CharacterTable } from "../CharacterTable/CharacterTable"
 import { Container } from "../Container/Container"
 import { Filters } from "../Filters/Filters"
 import { Modal } from "../Modal/Modal"
 import { Search } from "../Search/Search"
-import { SubmitButton } from "../SubmitButton/SubmitButton"
 
 export default function CharacterPicker() {
   // Current character list
@@ -26,6 +26,9 @@ export default function CharacterPicker() {
   const [selectedCharacters, setSelectedCharacters] = useState<CharacterType[]>(
     []
   )
+
+  // Modal state
+  const [isModalOpen, setIsModalOpen] = useState(false)
 
   useEffect(() => {
     fetch("/api/characters")
@@ -62,16 +65,22 @@ export default function CharacterPicker() {
           statusFilter={statusFilter}
           setStatusFilter={setStatusFilter}
         />
-        <CharacterTable characters={filteredCharacters} />
+        <CharacterTable
+          characters={filteredCharacters}
+          selectedCharacters={selectedCharacters}
+          setSelectedCharacters={setSelectedCharacters}
+        />
       </Container>
-      <SubmitButton
+      <ActionButtons
+        selectedCharacters={selectedCharacters}
         filteredCharacters={filteredCharacters}
         setSelectedCharacters={setSelectedCharacters}
+        setIsModalOpen={setIsModalOpen}
       />
       {
         // if there are selected Characters, display a modal with their names listed
-        selectedCharacters.length > 0 && (
-          <Modal setSelectedCharacters={setSelectedCharacters}>
+        isModalOpen && (
+          <Modal setIsModalOpen={setIsModalOpen}>
             <>
               <h2>Your Crack Team</h2>
               <CharacterTable characters={selectedCharacters} />

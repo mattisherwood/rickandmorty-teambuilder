@@ -1,0 +1,26 @@
+.button {
+  background: var(--offWhite);
+  border-radius: 10px;
+  color: var(--white);
+  padding: var(--spacing);
+  border: solid 1px var(--primary);
+  cursor: pointer;
+}
+
+.button:hover {
+  background: var(--primary-dark);
+}
+
+.fullWidth {
+  width: 100%;
+}
+
+@media (prefers-color-scheme: dark) {
+  .button {
+    background: rgba(var(--black-rgb), 0.8);
+  }
+
+  .button:hover {
+    background: var(--darkGray);
+  }
+}
