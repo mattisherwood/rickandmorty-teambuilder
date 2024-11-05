@@ -1,7 +1,7 @@
 .root {
   position: sticky;
   top: 0;
-  background: var(--offWhite);
+  background: var(--black);
   padding-block: var(--spacing);
   z-index: 1;
 }
@@ -10,10 +10,4 @@
   width: 100%;
   padding: var(--spacing);
   font-size: inherit;
-}
-
-@media (prefers-color-scheme: dark) {
-  .root {
-    background: var(--black);
-  }
 }

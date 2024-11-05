@@ -2,10 +2,12 @@
 
 This is a [Next.js](https://nextjs.org) project (bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app) to see what I could create in short period of time.
 
-|                                                                                                                |                                                                                                        |                                                                                                          |
-| -------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------- |
-| After **3hrs** ([Load](https://rickandmorty-teambuilder-hbt60rks8-matt-isherwoods-projects.vercel.app/))       | Filterable character list with data fetched from public API, generates random team from filtered list. | [![3 hours][3hr]](https://rickandmorty-teambuilder-hbt60rks8-matt-isherwoods-projects.vercel.app/)       |
-| After a further **1hr 10min** ([Load](rickandmorty-teambuilder-jh139afch-matt-isherwoods-projects.vercel.app)) | Improve team selection functionality with individual selection/deselection, randomize & clear.         | [![4 hours 10minutes][4hr10min]](rickandmorty-teambuilder-jh139afch-matt-isherwoods-projects.vercel.app) |
+|                                                                                                                        |                                                                                                        |                                                                                                                                               |
+| ---------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| After **3hrs** ([Load](https://rickandmorty-teambuilder-hbt60rks8-matt-isherwoods-projects.vercel.app/))               | Filterable character list with data fetched from public API, generates random team from filtered list. | [![Screenshot of the app after 3 hours][3hr]](https://rickandmorty-teambuilder-hbt60rks8-matt-isherwoods-projects.vercel.app/)                |
+| A few odd mins here and there                                                                                          | A few unimportant bits (Update README, add a favicon etc.)                                             |                                                                                                                                               |
+| After a further **1hr 10min** ([Load](https://rickandmorty-teambuilder-jh139afch-matt-isherwoods-projects.vercel.app)) | Improve team selection functionality with individual selection/deselection, randomize & clear.         | [![Screenshot of the app after 4 hours 10 minutes][4hr10min]](https://rickandmorty-teambuilder-jh139afch-matt-isherwoods-projects.vercel.app) |
+| After a further **35mins** ([Load](https://rickandmorty-teambuilder.vercel.app))                                       | Add a nice space background effect and remove light-mode                                               | [![Screenshot of the app after 4 hours 45 minutes][4hr45min]](https://rickandmorty-teambuilder.vercel.app)                                    |
 
 ## Getting Started
 
@@ -44,3 +46,4 @@ Check out the [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
 [3hr]: screenshots/3hr-screenshots.png "Screenshot of the app after 3 hours"
 [4hr10min]: screenshots/4hr10min-screenshots.png "Screenshot of the app after 4 hours 10min"
+[4hr45min]: screenshots/4hr45min-screenshots.png "Screenshot of the app after 4 hours 45min"

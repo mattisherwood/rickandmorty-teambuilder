@@ -38,15 +38,9 @@ li > ul {
 }
 
 code {
-  background: var(--offWhite);
+  background: var(--darkGray);
   border-radius: calc(var(--spacing) * 0.5);
   padding: calc(var(--spacing) * 0.5) var(--spacing);
   font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
     Bitstream Vera Sans Mono, Courier New, monospace;
-}
-
-@media (prefers-color-scheme: dark) {
-  code {
-    background: var(--darkGray);
-  }
 }

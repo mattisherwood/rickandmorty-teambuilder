@@ -3,6 +3,7 @@ import { Header } from "@/components/Header/Header"
 import type { Metadata } from "next"
 import { Noto_Sans } from "next/font/google"
 import "../styles/globals.css"
+import "../styles/stars.css"
 import "../styles/structure.css"
 import "../styles/typography.css"
 import "../styles/variables.css"
@@ -42,6 +43,9 @@ export default function RootLayout({
         <link rel='manifest' href='/favicons/site.webmanifest' />
       </head>
       <body className={notoSans.variable}>
+        <div id='stars' />
+        <div id='stars2' />
+        <div id='stars3' />
         <Header />
         {children}
         <Footer />
