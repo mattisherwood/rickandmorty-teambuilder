@@ -32,6 +32,7 @@
   align-items: center;
   cursor: pointer;
   border-radius: 100%;
-  background-color: var(--white);
-  color: var(--black);
+  background: none;
+  color: var(--white);
+  border: solid 1px;
 }

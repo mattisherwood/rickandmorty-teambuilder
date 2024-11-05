@@ -2,25 +2,16 @@
   display: flex;
   flex: 1;
   padding-block: calc(var(--spacing) * 4);
-  border-top: 1px solid var(--offWhite);
+  border-top: 1px solid var(--darkGray);
   justify-content: center;
   align-items: center;
   text-align: center;
-  background: var(--white);
+  background: var(--black);
 }
 
 .logo {
   height: 1em;
   margin: 0 0 -2px 0.5rem;
+  filter: invert(1);
 }
 
-@media (prefers-color-scheme: dark) {
-  .root {
-    background: var(--black);
-    border-color: var(--darkGray);
-  }
-
-  .logo {
-    filter: invert(1);
-  }
-}
