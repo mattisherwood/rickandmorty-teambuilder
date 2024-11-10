@@ -7,6 +7,8 @@
   --white: rgb(var(--white-rgb));
   --offWhite-rgb: 234, 234, 234;
   --offWhite: rgb(var(--offWhite-rgb));
+  --gray-rgb: 55, 55, 55;
+  --gray: rgb(var(--gray-rgb));
   --darkGray-rgb: 34, 34, 34;
   --darkGray: rgb(var(--darkGray-rgb));
   --black-rgb: 19, 17, 25;

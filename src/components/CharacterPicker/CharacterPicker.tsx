@@ -26,6 +26,7 @@ export default function CharacterPicker() {
   const [selectedCharacters, setSelectedCharacters] = useState<CharacterType[]>(
     []
   )
+  const [isLoading, setIsLoading] = useState<boolean>(true)
 
   // Modal state
   const [isModalOpen, setIsModalOpen] = useState(false)
@@ -35,7 +36,6 @@ export default function CharacterPicker() {
       .then((response) => response.json())
       .then((data) => {
         setCharacters(data.results)
-        setFilteredCharacters(data.results)
       })
   }, [])
 
@@ -51,6 +51,7 @@ export default function CharacterPicker() {
       .filter(({ status }) => status === statusFilter || statusFilter === "")
 
     setFilteredCharacters(filtered)
+    if (filtered.length) setIsLoading(false)
   }, [characters, genderFilter, search, speciesFilter, statusFilter])
 
   return (
@@ -67,6 +68,7 @@ export default function CharacterPicker() {
         />
         <CharacterTable
           characters={filteredCharacters}
+          isLoading={isLoading}
           selectedCharacters={selectedCharacters}
           setSelectedCharacters={setSelectedCharacters}
         />

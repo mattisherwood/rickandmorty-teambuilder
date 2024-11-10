@@ -29,4 +29,5 @@
 .image {
   border-radius: 50%;
   display: block;
+  background: var(--gray);
 }
