@@ -3,48 +3,52 @@ import { Character } from "../Character/Character"
 
 type Props = {
   characters: CharacterType[]
+  isLoading?: boolean
   selectedCharacters?: CharacterType[]
   setSelectedCharacters?: (characters: CharacterType[]) => void
 }
 
 export const CharacterTable = ({
   characters,
+  isLoading,
   selectedCharacters,
   setSelectedCharacters,
-}: Props) => (
-  <div>
-    {characters.map((character) => {
-      const { id, name, image, species, gender, status } = character
-      const isActive =
-        selectedCharacters &&
-        selectedCharacters.some(
-          (selectedCharacter) => selectedCharacter?.id === id
+}: Props) =>
+  isLoading ? (
+    <>
+      {Array.from({ length: 10 }).map((_, i) => (
+        <Character key={i} />
+      ))}
+    </>
+  ) : (
+    <>
+      {characters.map((character) => {
+        const isActive =
+          selectedCharacters &&
+          selectedCharacters.some(
+            (selectedCharacter) => selectedCharacter?.id === character.id
+          )
+        return (
+          <Character
+            character={character}
+            isActive={isActive}
+            key={character.id}
+            onClick={
+              setSelectedCharacters != undefined &&
+              selectedCharacters != undefined
+                ? () => {
+                    setSelectedCharacters(
+                      isActive
+                        ? selectedCharacters.filter(
+                            ({ id }) => id !== character.id
+                          )
+                        : [...selectedCharacters, character]
+                    )
+                  }
+                : undefined
+            }
+          />
         )
-      return (
-        <Character
-          gender={gender}
-          image={image}
-          isActive={isActive}
-          key={id}
-          name={name}
-          onClick={
-            setSelectedCharacters != undefined &&
-            selectedCharacters != undefined
-              ? () => {
-                  setSelectedCharacters(
-                    isActive
-                      ? selectedCharacters.filter(
-                          (character) => character?.id !== id
-                        )
-                      : [...selectedCharacters, character]
-                  )
-                }
-              : undefined
-          }
-          species={species}
-          status={status}
-        />
-      )
-    })}
-  </div>
-)
+      })}
+    </>
+  )
