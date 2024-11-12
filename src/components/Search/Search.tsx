@@ -15,12 +15,14 @@ export const Search = ({ characterCount, search, setSearch }: Props) => (
       placeholder={`Search within ${characterCount} characters`}
       className={classes.input}
     />
-    <button
-      aria-label='clear'
-      className={classes.clear}
-      onClick={() => setSearch("")}
-    >
-      X
-    </button>
+    {search.length > 0 && (
+      <button
+        aria-label='clear'
+        className={classes.clear}
+        onClick={() => setSearch("")}
+      >
+        X
+      </button>
+    )}
   </div>
 )
