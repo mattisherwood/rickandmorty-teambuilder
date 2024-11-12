@@ -1,6 +1,10 @@
 # Rick & Morty Team Builder
 
-This is a [Next.js](https://nextjs.org) project (bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app) to see what I could create in short period of time.
+## The Purpose & Features
+
+This is a [Next.js](https://nextjs.org) project (bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app)) to see what I could create in short period of time.
+
+(Namely first within **3hrs** and **6hrs**.)
 
 |                                                                                                                        |                                                                                                        |                                                                                                                                               |
 | ---------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -8,7 +12,20 @@ This is a [Next.js](https://nextjs.org) project (bootstrapped with [`create-next
 | A few odd mins here and there                                                                                          | A few unimportant bits (Update README, add a favicon etc.)                                             |                                                                                                                                               |
 | After a further **1hr 10min** ([Load](https://rickandmorty-teambuilder-jh139afch-matt-isherwoods-projects.vercel.app)) | Improve team selection functionality with individual selection/deselection, randomize & clear.         | [![Screenshot of the app after 4 hours 10 minutes][4hr10min]](https://rickandmorty-teambuilder-jh139afch-matt-isherwoods-projects.vercel.app) |
 | After a further **35mins** ([Load](https://rickandmorty-teambuilder-obs8fyau8-matt-isherwoods-projects.vercel.app))    | Add a nice space background effect and remove light-mode                                               | [![Screenshot of the app after 4 hours 45 minutes][4hr45min]](https://rickandmorty-teambuilder-obs8fyau8-matt-isherwoods-projects.vercel.app) |
-| After a further **20min** ([Load](https://rickandmorty-teambuilder.vercel.app))                                        | Add loading state with skeletons                                                                       |                                                                                                                                               |
+| After a further **20min** ([Load](rickandmorty-teambuilder-icrbnn8vg-matt-isherwoods-projects.vercel.app))             | Add loading state with skeletons                                                                       |                                                                                                                                               |
+| After a further **55min** ([Load](https://rickandmorty-teambuilder.vercel.app))                                        | Add pagination and better filter method                                                                |                                                                                                                                               |
+
+### Next up
+
+- Infinite Load (remove pagination buttons)
+- Hidden slide-out drawer for filters
+- Run type codegen from GQL query
+- Increased character information including modal
+- i18n with translated strings
+
+### Further away backend chapter
+
+- Login, saving and sharing teams
 
 ## Getting Started
 
