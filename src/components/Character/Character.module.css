@@ -13,6 +13,12 @@
   box-shadow: 0 0 0.5rem var(--primary);
 }
 
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing);
+}
+
 .name {
   margin: 0;
   font-size: 1.25rem;
@@ -28,7 +34,6 @@
   .name,
   .name,
   .subtitle {
-    border-radius: 10px;
     background: var(--gray);
     animation: pulse 1.5s infinite ease-in-out;
   }

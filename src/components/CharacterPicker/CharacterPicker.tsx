@@ -75,6 +75,7 @@ export default function CharacterPicker() {
       </Container>
       <ActionButtons
         selectedCharacters={selectedCharacters}
+        isLoading={isLoading}
         filteredCharacters={filteredCharacters}
         setSelectedCharacters={setSelectedCharacters}
         setIsModalOpen={setIsModalOpen}

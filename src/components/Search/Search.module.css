@@ -11,3 +11,21 @@
   padding: var(--spacing);
   font-size: inherit;
 }
+
+.clear {
+  position: absolute;
+  right: var(--spacing);
+  inset: var(--spacing) 0 var(--spacing) auto;
+  cursor: pointer;
+  border: 0;
+  background: none;
+  padding: var(--spacing);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 44px;
+
+  &:hover {
+    background: rgba(var(--white-rgb), 0.21);
+  }
+}
