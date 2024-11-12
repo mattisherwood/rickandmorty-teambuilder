@@ -1,17 +1,18 @@
 import classes from "./Search.module.css"
 
 type Props = {
+  characterCount: number
   search: string
   setSearch: (search: string) => void
 }
 
-export const Search = ({ search, setSearch }: Props) => (
+export const Search = ({ characterCount, search, setSearch }: Props) => (
   <div className={classes.root}>
     <input
       type='text'
       value={search}
       onChange={(e) => setSearch(e.target.value)}
-      placeholder='Search for a character'
+      placeholder={`Search within ${characterCount} characters`}
       className={classes.input}
     />
     <button

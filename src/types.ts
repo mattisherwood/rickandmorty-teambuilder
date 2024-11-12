@@ -1,3 +1,11 @@
+export type CharacterData = {
+  info: {
+    count: number
+    pages: number
+  }
+  results: CharacterType[]
+}
+
 export type CharacterType = {
   id: number
   name: string
