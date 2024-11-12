@@ -2,7 +2,6 @@
   padding: var(--spacing);
   display: flex;
   gap: var(--spacing);
-  flex-wrap: wrap;
 }
 
 .clickable {

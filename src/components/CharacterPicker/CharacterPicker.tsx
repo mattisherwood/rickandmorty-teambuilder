@@ -1,6 +1,6 @@
 "use client"
 
-import { CharacterType } from "@/types"
+import { CharacterData, CharacterType } from "@/types"
 import { useEffect, useState } from "react"
 import { ActionButtons } from "../ActionButtons/ActionButtons"
 import { CharacterTable } from "../CharacterTable/CharacterTable"
@@ -11,7 +11,11 @@ import { Search } from "../Search/Search"
 
 export default function CharacterPicker() {
   // Current character list
-  const [characters, setCharacters] = useState<CharacterType[]>([])
+  const [characterData, setCharacterData] = useState<CharacterData>({
+    info: { count: 0, pages: 0 },
+    results: [],
+  })
+  const [page, setPage] = useState(1)
   const [filteredCharacters, setFilteredCharacters] = useState<CharacterType[]>(
     []
   )
@@ -32,15 +36,24 @@ export default function CharacterPicker() {
   const [isModalOpen, setIsModalOpen] = useState(false)
 
   useEffect(() => {
-    fetch("/api/characters")
+    const queryString = [
+      `page=${page}`,
+      search && `name=${search}`,
+      genderFilter && `gender=${genderFilter}`,
+      speciesFilter && `species=${speciesFilter}`,
+      statusFilter && `status=${statusFilter}`,
+    ]
+      .filter((query) => query)
+      .join("&")
+    fetch(`/api/characters?${queryString}`)
       .then((response) => response.json())
       .then((data) => {
-        setCharacters(data.results)
+        setCharacterData(data)
       })
-  }, [])
+  }, [page, genderFilter, search, speciesFilter, statusFilter])
 
   useEffect(() => {
-    const filtered = characters
+    const filtered = characterData.results
       .filter((character) =>
         character.name.toLowerCase().includes(search.toLowerCase())
       )
@@ -52,18 +65,25 @@ export default function CharacterPicker() {
 
     setFilteredCharacters(filtered)
     if (filtered.length) setIsLoading(false)
-  }, [characters, genderFilter, search, speciesFilter, statusFilter])
+  }, [characterData, genderFilter, search, speciesFilter, statusFilter])
 
   return (
     <>
       <Container>
-        <Search search={search} setSearch={setSearch} />
+        <Search
+          search={search}
+          setSearch={setSearch}
+          characterCount={characterData.info.count}
+        />
         <Filters
+          characterData={characterData}
           genderFilter={genderFilter}
-          setGenderFilter={setGenderFilter}
+          page={page}
           speciesFilter={speciesFilter}
-          setSpeciesFilter={setSpeciesFilter}
           statusFilter={statusFilter}
+          setGenderFilter={setGenderFilter}
+          setPage={setPage}
+          setSpeciesFilter={setSpeciesFilter}
           setStatusFilter={setStatusFilter}
         />
         <CharacterTable

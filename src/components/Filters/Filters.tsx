@@ -1,20 +1,28 @@
+import { CharacterData } from "@/types"
+import { Button } from "../Button/Button"
 import { Filter } from "../Filter/Filter"
 import classes from "./Filters.module.css"
 
 type Props = {
+  characterData: CharacterData
   genderFilter: string
+  page: number
   speciesFilter: string
   statusFilter: string
   setGenderFilter: (genderFilter: string) => void
+  setPage: (page: number) => void
   setSpeciesFilter: (speciesFilter: string) => void
   setStatusFilter: (statusFilter: string) => void
 }
 export const Filters = ({
+  characterData,
   genderFilter,
-  setGenderFilter,
+  page,
   speciesFilter,
-  setSpeciesFilter,
   statusFilter,
+  setGenderFilter,
+  setPage,
+  setSpeciesFilter,
   setStatusFilter,
 }: Props) => (
   <div className={classes.root}>
@@ -39,5 +47,14 @@ export const Filters = ({
       options={["Dead", "Alive", "unknown"]}
       selected={statusFilter}
     />
+    <Button onClick={() => setPage(page - 1)} disabled={page === 1}>
+      Previous
+    </Button>
+    <Button
+      onClick={() => setPage(page + 1)}
+      disabled={page === characterData.info.pages}
+    >
+      Next
+    </Button>
   </div>
 )

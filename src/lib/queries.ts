@@ -1,10 +1,11 @@
 import { gql } from "urql"
 
 export const GET_CHARACTERS = gql`
-  query GetCharacters {
-    characters {
+  query GetCharacters($page: Int!, $filter: FilterCharacter) {
+    characters(page: $page, filter: $filter) {
       info {
         count
+        pages
       }
       results {
         id
