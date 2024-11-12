@@ -4,11 +4,19 @@
   color: var(--white);
   padding: var(--spacing);
   border: solid 1px var(--primary);
-  cursor: pointer;
-}
+  line-height: 20px;
 
-.button:hover {
-  background: var(--darkGray);
+  &:not(:disabled) {
+    cursor: pointer;
+
+    &:hover {
+      background: var(--darkGray);
+    }
+  }
+
+  &:disabled {
+    opacity: 0.3;
+  }
 }
 
 .fullWidth {

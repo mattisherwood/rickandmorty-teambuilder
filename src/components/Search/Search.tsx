@@ -14,5 +14,12 @@ export const Search = ({ search, setSearch }: Props) => (
       placeholder='Search for a character'
       className={classes.input}
     />
+    <button
+      aria-label='clear'
+      className={classes.clear}
+      onClick={() => setSearch("")}
+    >
+      X
+    </button>
   </div>
 )
